@@ -1,15 +1,17 @@
 import { useState } from "react";
 import API from "../services/api";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const handleLogin = async () => {
     try {
       const res = await API.post("/auth/login", {
         email,
-        password
+        password,
       });
 
       localStorage.setItem("token", res.data.token);
@@ -17,8 +19,7 @@ function Login() {
 
       alert("Login successful");
 
-      window.location.href = "/products";
-
+      navigate("/products");
     } catch (err) {
       console.error(err);
       alert("Login failed");
