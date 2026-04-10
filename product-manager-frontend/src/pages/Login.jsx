@@ -27,7 +27,10 @@ function Login() {
   };
 
   return (
-    <div>
+    <div style={{ position: "relative", height: "100vh" }}>
+      <button style={{ position: "absolute", top: "10px", right: "10px" }}>
+        Dummy{" "}
+      </button>
       <h2>Login</h2>
 
       <input
@@ -42,7 +45,9 @@ function Login() {
         onChange={(e) => setPassword(e.target.value)}
       />
 
-      <button onClick={handleLogin}>Login</button>
+      <div>
+        <button onClick={handleLogin}>Login</button>
+      </div>
     </div>
   );
 }

@@ -1,13 +1,15 @@
-import {Routes, Route} from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
 import Products from "./pages/Products";
+import Dummy from "./pages/Dummy";
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Login />} />
       <Route path="/products" element={<Products />} />
-    </Routes> 
+      <Route path="/dummy" element={<Dummy />} />
+    </Routes>
   );
 }
 
