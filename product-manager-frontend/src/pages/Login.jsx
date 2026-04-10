@@ -28,7 +28,10 @@ function Login() {
 
   return (
     <div style={{ position: "relative", height: "100vh" }}>
-      <button style={{ position: "absolute", top: "10px", right: "10px" }}>
+      <button
+        onClick={() => navigate("/dummy")}
+        style={{ position: "absolute", top: "10px", right: "10px" }}
+      >
         Dummy{" "}
       </button>
       <h2>Login</h2>
